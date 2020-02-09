@@ -8,10 +8,10 @@ services: Services
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.services](https://galaxy.ansible.com/devops-toolbox.services)
+[https://galaxy.ansible.com/devopstoolbox.services](https://galaxy.ansible.com/devopstoolbox.services)
 
 ```bash
-ansible-galaxy install devops-toolbox.services
+ansible-galaxy install devopstoolbox.services
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: services is configured
       import_role:
-        name: devops-toolbox.services
+        name: devopstoolbox.services
       vars:
         services_packages_state: present
         services_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
