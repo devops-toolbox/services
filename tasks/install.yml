@@ -1,0 +1,27 @@
+---
+# Install services packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ services_packages_remove }}"
+    state: absent
+  become: true
+  when: services_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ services_packages_repos }}"
+    state: "{{ services_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ services_packages_prereq }}"
+    state: "{{ services_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ services_packages_install }}"
+    state: "{{ services_packages_state }}"
+  become: true
